@@ -37,12 +37,7 @@ class _LoginPageState extends State<LoginPage> {
           content: Text(
             "Successfully Logged in",
             style: TextStyle(
-              color: Color.fromRGBO(
-                34,
-                35,
-                44,
-                1,
-              ),
+              color: Color.fromRGBO(34, 35, 44, 1),
             ),
           ),
           backgroundColor: Colors.white,
@@ -52,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            e.toString(),
+            'Error! ${e.toString()}',
           ),
         ),
       );

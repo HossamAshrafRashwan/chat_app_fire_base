@@ -21,6 +21,18 @@ class _HomePageState extends State<HomePage> {
     final authService = Provider.of<AuthService>(context, listen: false);
 
     authService.signOut();
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        backgroundColor: Colors.white,
+        content: Text(
+          "You have signed out!",
+          style: TextStyle(
+            color: Color.fromRGBO(34, 35, 44, 1),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
