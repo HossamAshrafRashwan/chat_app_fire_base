@@ -90,11 +90,27 @@ class _ChatPageState extends State<ChatPage> {
       ),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Text('Error${snapshot.error}');
+          return Center(
+            child: Text(
+              'Error${snapshot.error}',
+              style: const TextStyle(
+                color: Colors.green,
+                fontSize: 25,
+              ),
+            ),
+          );
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Text('Loading...');
+          return const Center(
+            child: Text(
+              "Loading...",
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 25,
+              ),
+            ),
+          );
         }
 
         return ListView(
